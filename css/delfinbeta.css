@@ -1,0 +1,261 @@
+/*********************************************/
+/*****                                   *****/
+/*****  Documento CSS                    *****/
+/*****                                   *****/
+/*****  Fecha: 26/10/2016                *****/
+/*****  Autor: Lcda. Dayan Betancourt    *****/
+/*****                                   *****/
+/*********************************************/
+@import "https://fonts.googleapis.com/css?family=Farsan|Kalam";
+
+/*********************************************/
+/*****              Reset                *****/
+/*********************************************/
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+       		box-sizing: border-box;
+}
+
+article, aside, button, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+figure { margin: 0; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/*********************************************/
+/*****        Etiquetas Globales         *****/
+/*********************************************/
+body {
+	color: #000000;
+	font-family: 'Farsan', cursive, serif;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Kalam', cursive, serif;
+	line-height: normal;
+}
+
+h1 { font-size: 2.5em; }
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #E86900;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+/*********************************************/
+/*****            Encabezado             *****/
+/*********************************************/
+
+
+/*********************************************/
+/*****               Menu                *****/
+/*********************************************/
+#menu {
+	background-color: #E86900;
+	color: #FFFFFF;
+}
+
+/*********************************************/
+/*****           Pie de Página           *****/
+/*********************************************/
+.pie_pag {
+	display: block;
+	font-size: .8em;
+	margin-top: 4em;
+	padding: 1em;
+	text-align: center;
+}
+
+/*********************************************/
+/*****             Formulario            *****/
+/*********************************************/
+form {
+	margin: 1em 0;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	padding: .6em .4em;
+	width: 100%;
+}
+
+input, textarea {
+	border: 2px solid #E86900;
+	-webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+       -o-border-radius: 6px;
+       		border-radius: 6px;
+  display: block;
+	outline: 0;
+	padding: .6em;
+	width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	display: block;
+	float: left;
+	margin-right: -1.6em;
+	opacity: 0;
+	width: auto;
+	z-index: -1;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+	cursor: pointer;
+	display: inline-block;
+	padding: .4em;
+	padding-left: 2.8em;
+	position: relative;
+	text-align: left;
+}
+
+input[type="checkbox"] + label:before, input[type="radio"] + label:before {
+	border: 2px solid #E86900;
+	-webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+       -o-border-radius: 6px;
+       		border-radius: 6px;
+	content: '';
+	display: inline-block;
+	height: 2em;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 2em;
+}
+
+input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
+	background-color: #E86900;
+	color: #FFFFFF;
+	content: '\f00c';
+	font-family: 'icomoon';
+	padding-top: .2em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+input:focus, textarea:focus {
+	background-color: rgba(232, 105, 0, .5);
+	color: #FFFFFF;
+}
+
+.campo {
+	display: block;
+	margin: 1em 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.botonera {
+	clear: both;
+	text-align: center;
+}
+
+button, button.boton {
+	background-color: #FFFFFF;
+	color: #E86900;
+	cursor: pointer;
+	display: inline-block;
+}
+
+button:hover, button.boton:hover {
+	background-color: rgba(232, 105, 0, .5);
+	color: #FFFFFF;
+}
+
+.boton, a.boton {
+	border: 2px solid #E86900;
+	-webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+       -o-border-radius: 6px;
+       		border-radius: 6px;
+	color: #FFFFFF;
+	display: inline-block;
+	padding: .4em 1em;
+	text-transform: uppercase;
+}
+
+.boton:hover {
+	background-color: rgba(255, 255, 255, .8);
+	color: #E86900;
+}
+
+#panel_error {
+  background-color: #F36D66;
+  border: 1px solid #E29794;
+  clear: both;
+  color: #FFFFFF;
+  display: none;
+  padding: 0 2em;
+  text-align: center;
+}
+
+#panel_exito {
+  background-color: #CAFBE1;
+  border: 1px solid #A7F8CD;
+  clear: both;
+  color: #0AC964;
+  display: none;
+  padding: 0 2em;
+  text-align: center;
+}
+
+/*********************************************/
+/*****         Etiquetas Propias         *****/
+/*********************************************/
+.contenedor {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.img-responsive {
+	height: auto !important;
+	max-width: 100%;
+}
+
+.limpiar {
+	clear: both;
+}
+
+/*********************************************/
+/*****           MEDIA QUERIES           *****/
+/*********************************************/
+@media screen and (max-width: 1024px) {
+	.contenedor {
+		padding: 0 1em;
+		width: 100%;
+	}
+}
