@@ -26,6 +26,56 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*********************************************/
+/*****         Encabezado - Menú         *****/
+/*********************************************/
+.encabezado-inicio {
+	background-color: transparent;
+	border: none;
+	color: #FFFFFF;
+	height: 90px;
+}
+
+.encabezado-inicio .navbar-brand {
+	padding-top: 0;
+}
+
+.encabezado-inicio .navbar-toggle {
+	margin: 24px 20px 24px;
+}
+
+.encabezado-fondo {
+	background-color: #00008C;
+}
+
+.logo {
+	width: 120px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: #FFFFFF;
+  color: #00008C;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a {
+	-webkit-border-radius: 6px;
+		 -moz-border-radius: 6px;
+		 	 -o-border-radius: 6px;
+		 	 		border-radius: 6px;
+  color: #FFFFFF;
+  margin: 0 2px;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  background-color: rgba(255, 255, 255, .7);
+  color: #00008C;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: #00008C;
+}
+
+/*********************************************/
 /*****              Portada              *****/
 /*********************************************/
 .portada {
@@ -40,9 +90,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: #FFFFFF;
 	height: 100vh;
 	overflow: hidden;
-}
-
-.portada .portada-titular {
 }
 
 .portada h2 {
@@ -105,11 +152,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*********************************************/
-/*****            Encabezado             *****/
-/*********************************************/
-
-
-/*********************************************/
 /*****               Menu                *****/
 /*********************************************/
 
@@ -124,5 +166,15 @@ h1, h2, h3, h4, h5, h6 {
 /*********************************************/
 /*****           MEDIA QUERIES           *****/
 /*********************************************/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+	.portada-titular {
+		margin-top: 30vh;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#menuWeb {
+		background-color: transparent;
+		margin-top: 20px;
+	}
 }
