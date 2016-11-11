@@ -158,6 +158,52 @@ h1, h2, h3, h4, h5, h6 {
 /*********************************************/
 /*****           Pie de Página           *****/
 /*********************************************/
+.piePag {
+	background-color: #000000;
+	color: #CCCCCC;
+	font-family: 'Cutive Mono', monospace, serif;
+	font-size: .7em;
+}
+
+.piePag h2 {
+	font-size: 20px;
+}
+
+.piePag ul {
+	margin: 0;
+	padding: 0;
+}
+
+.piePag ul li {
+	list-style: none;
+}
+
+.piePag a {
+	color: #FFFFFF;
+}
+
+.piePag hr {
+	margin: .8em 0;
+}
+
+.piePag .icono {
+	font-size: 20px;
+}
+
+.piePag .derechos {
+	font-size: .8em;
+	text-align: center;
+}
+
+.piePag .redes li {
+	display: inline-block;
+	font-size: 3em;
+	margin: 0 4px;
+}
+
+.piePag .redes li a {
+	text-decoration: none;
+}
 
 /*********************************************/
 /*****             Formulario            *****/
