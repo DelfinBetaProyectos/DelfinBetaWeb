@@ -36,16 +36,26 @@ h1, h2, h3, h4, h5, h6 {
 	height: 90px;
 }
 
-.encabezado-inicio .navbar-brand {
-	padding-top: 0;
-}
-
-.encabezado-inicio .navbar-toggle {
-	margin: 24px 20px 24px;
+.encabezado {
+	background-color: #00008C;
+	color: #FFFFFF;
+	height: 90px;
 }
 
 .encabezado-fondo {
 	background-color: #00008C;
+}
+
+.espaciado-menu {
+	padding-top: 90px;
+}
+
+.encabezado-inicio .navbar-brand, .encabezado .navbar-brand {
+	padding-top: 0;
+}
+
+.encabezado-inicio .navbar-toggle, .encabezado .navbar-toggle {
+	margin: 24px 20px 24px;
 }
 
 .logo {
@@ -237,11 +247,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-accion1:hover {
 	background-color: #FFC200;
+	border-color: #FFFFFF;
 	color: #FFFFFF;
 }
 
 .btn-accion2:hover {
 	background-color: #00008C;
+	border-color: #FFFFFF;
 	color: #FFFFFF;
 }
 
