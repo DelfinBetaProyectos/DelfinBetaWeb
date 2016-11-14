@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<title>DelfinBeta</title>
+	<title>Contacto // DelfinBeta</title>
 	<meta name="creator" content="www.delfinbeta.com.ve" />
 	<meta name="description" content="DelfinBeta es una Desarrolladora Web Venezolana, mi nombre es Dayan Betancourt desarrollo Frontend y Backend y también soy Emprendedora." />
 	<meta name="distribution" content="global" />
@@ -65,45 +65,57 @@
 			<div id="menuWeb" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="index.html">Inicio</a></li>
-					<li class="active"><a href="delfinbeta.html">¿Quién es DelfinBeta?</a></li>
+					<li><a href="delfinbeta.html">¿Quién es DelfinBeta?</a></li>
 					<li><a href="trabajos.html">Mis Trabajos</a></li>
 					<li><a href="compartir/">Para Compartir</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
+					<li class="active"><a href="contacto.html">Contacto</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<section class="delfinbeta">
-		<div class="container">
-			<h2>¿Quién es DelfinBeta?</h2>
-			<div class="row">
-				<div class="col-xs-12 col-md-8">
-					<p align="justify">Hola, mi nombre es <strong>Dayan Betancourt</strong>, orgullosamente Venezolana, como me dicen mis amigos soy nacionalista jajaja; emprendedora y tengo algo de poeta, sueño con que todos los animales algún día tengan un hogar. Me gusta reír, pero no sé contar chistes, me encanta dormir y la paz que produce el mar, si quieres verme feliz, invítame a la playa.</p>
-					<p align="justify">Profesionalmente soy Licenciada en Computación, egresada de la Universidad de Carabobo, en donde aprendí que la computación no era un juego y que como ciencia tiene muchos campos con infinitas posibilidades. Mi área favorita es el desarrollo web, por lo cual me dediqué a ello y fundé una pequeña empresa llamada <a href="http://www.tecnod20.com" target="_blank">Tecno D 2.0, C.A.</a></p>
-					<p align="justify">Durante 8 años me he dedicado al Desarrollo Frontend y Backend, HTML, JS, CSS, Responsive Design, PHP y MYSQL. Actualmente estoy centrada en potenciar mi nivel profesional con el trabajo colaborativo, aprendiendo herramientas como Git y la gestión de proyectos en GitHub. Me gusta aprender, por lo que me estoy actualizando en las tecnologías Backend y Servidores Cloud y por lo que el mejor regalo para mí es un libro del tema que sea, tecnológico o no.</p>
-					<p align="justify">Mi intención con esta web es mostrarte quién soy, llegar a conocerte, compartir experiencias y aprender juntos, porque entre amigos las sonrisas llenan y las lágrimas son de felicidad.</p>
-					<p align="right">Déjame tus datos y conversamos.</p>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<img src="img/Dayan.jpg" alt="Dayan Betancourt" title="Dayan Betancourt" class="img-responsive sombra" />
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="suscripcion jumbotron">
+	<section class="contacto">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-					<h2>Suscríbete<br /><small>Déjame tu email y compartiré contigo info sobre el mundo web.</small></h2>
-					<form id="form_suscripcion" name="form_suscripcion" action="suscripcion.php" method="post">
-						<div class="input-group input-group-lg">
-							<span class="input-group-addon"><i class="icon-envelope-o"></i></span>
-							<input type="email" name="email" class="form-control" placeholder="tu@email.com" required />
-							<span class="input-group-btn">
-								<button type="submit" class="btn btn-default btn-accion2">Enviar</button>
-							</span>
+				<div class="col-xs-12 col-md-6">
+					<div class="sombra">
+						<h2>Contacto</h2>
+						<p>¡Hola! encantada de conocerte y compartir información, déjame un mensaje con tus datos y así conversamos.</p>
+						<p>También puedes encontrarme en los siguientes medios:</p>
+						<ul class="lista-cero">
+							<li><i class="icon-map-marker icono"></i> Maracay - Venezuela</li>
+							<li><i class="icon-whatsapp icono"></i> +58 (426) 533.81.67</li>
+							<li><i class="icon-envelope icono"></i> <a href="mailto:dkbetancourt@gmail.com">dkbetancourt@gmail.com</a></li>
+						</ul>
+						<h3>Redes Sociales</h3>
+						<ul class="redes">
+							<li><a href="https://twitter.com/delfinbeta" target="_blank"><i class="icon-twitter-square"></i></a></li>
+							<li><a href="https://www.facebook.com/delfin.beta" target="_blank"><i class="icon-facebook-official"></i></a></li>
+							<li><a href="https://ve.linkedin.com/in/delfinbeta" target="_blank"><i class="icon-linkedin-square"></i></a></li>
+							<li><a href="https://github.com/delfinbeta" target="_blank"><i class="icon-github-square"></i></a></li>
+							<li><a href="https://www.instagram.com/delfinbeta/" target="_blank"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<form id="form_contacto" name="form_contacto" action="contacto.php" method="post">
+						<div class="form-group">
+							<label for="nombre" class="sr-only">Nombre:</label>
+							<input type="text" class="form-control sombra input-lg" name="nombre" id="nombre" placeholder="Escribe tu Nombre" required />
+						</div>
+						<div class="form-group">
+							<label for="email" class="sr-only">Email:</label>
+							<input type="email" class="form-control sombra input-lg" name="email" id="email" placeholder="Escribe tu Email" required />
+						</div>
+						<div class="form-group">
+							<label for="mensaje" class="sr-only">Mensaje:</label>
+							<textarea class="form-control sombra input-lg" name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Déjame tu mensaje" required></textarea>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="suscripcion" id="suscripcion" value="1" /> <label for="suscripcion">Suscríbeme para recibir info sobre el mundo web.</label>
+						</div>
+						<div class="text-center">
+							<button type="submit" class="btn btn-default">Enviar</button>
 						</div>
 					</form>
 				</div>

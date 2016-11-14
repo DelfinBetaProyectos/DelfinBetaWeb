@@ -29,6 +29,37 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
+.icono {
+	display: inline-block;
+	text-align: center;
+	width: 1em;
+}
+
+.lista-cero {
+	margin: 0;
+	padding: 0;
+}
+
+.lista-cero li {
+	list-style: none;
+}
+
+.redes li {
+	display: inline-block;
+	font-size: 2.6em;
+	margin: 0 4px;
+}
+
+.redes li a {
+	text-decoration: none;
+}
+
+.sombra {
+	-webkit-box-shadow: 8px 6px 5px #B9B9B9;
+	   -moz-box-shadow: 8px 6px 5px #B9B9B9;
+	        box-shadow: 8px 6px 5px #B9B9B9;
+}
+
 /*********************************************/
 /*****         Encabezado - Menú         *****/
 /*********************************************/
@@ -174,15 +205,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 20px;
 }
 
-.piePag ul {
-	margin: 0;
-	padding: 0;
-}
-
-.piePag ul li {
-	list-style: none;
-}
-
 .piePag a {
 	color: #FFFFFF;
 }
@@ -191,23 +213,9 @@ h1, h2, h3, h4, h5, h6 {
 	margin: .8em 0;
 }
 
-.piePag .icono {
-	font-size: 20px;
-}
-
-.piePag .derechos {
+.derechos {
 	font-size: .8em;
 	text-align: center;
-}
-
-.piePag .redes li {
-	display: inline-block;
-	font-size: 3em;
-	margin: 0 4px;
-}
-
-.piePag .redes li a {
-	text-decoration: none;
 }
 
 /*********************************************/
@@ -220,7 +228,15 @@ h1, h2, h3, h4, h5, h6 {
 	padding: .8em;
 }
 
-.habilidad img {
+/*********************************************/
+/*****             Contacto              *****/
+/*********************************************/
+.contacto {
+	margin-bottom: 1em;
+}
+
+#form_contacto {
+	margin-top: 1.2em;
 }
 
 /*********************************************/
@@ -251,14 +267,23 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
+.form-control:focus {
+	background-color: #00008C;
+	border-color: #CCCCCC;
+	-webkit-box-shadow: 8px 6px 5px #B9B9B9;
+	   -moz-box-shadow: 8px 6px 5px #B9B9B9;
+	        box-shadow: 8px 6px 5px #B9B9B9;
+	color: #FFFFFF;
+}
+
 .btn-default {
 	color: #00008C;
 }
 
 .btn-default:hover {
-	background-color: #6AD9F9;
+	background-color: #00008C;
 	border-color: #00008C;
-	color: #00008C;
+	color: #FFFFFF;
 }
 
 .input-group-btn .btn-default {
@@ -275,6 +300,50 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #00008C;
 	border-color: #FFFFFF;
 	color: #FFFFFF;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	display: block;
+	float: left;
+	margin-right: -1.6em;
+	opacity: 0;
+	width: auto;
+	z-index: -1;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+	cursor: pointer;
+	display: inline-block;
+	padding-left: 2em;
+	position: relative;
+	text-align: left;
+}
+
+input[type="checkbox"] + label:before, input[type="radio"] + label:before {
+	border: 2px solid #00008C;
+	-webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+       -o-border-radius: 6px;
+       		border-radius: 6px;
+	content: '';
+	display: inline-block;
+	height: 1.4em;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1.4em;
+}
+
+input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
+	background-color: #00008C;
+	color: #FFFFFF;
+	content: '\f00c';
+	font-family: 'icomoon';
+	line-height: 1em;
+	padding-top: 2px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 /*********************************************/
