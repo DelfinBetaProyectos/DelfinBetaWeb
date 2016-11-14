@@ -24,7 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 /*********************************************/
 /*****        Etiquetas Generales        *****/
 /*********************************************/
-
+.img-responsive {
+	height: auto;
+	width: 100%;
+}
 
 /*********************************************/
 /*****         Encabezado - Menú         *****/
@@ -208,6 +211,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*********************************************/
+/*****            Habilidades            *****/
+/*********************************************/
+.habilidad {
+	border: 1px solid #00008C;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	padding: .8em;
+}
+
+.habilidad img {
+}
+
+/*********************************************/
 /*****            Suscripción            *****/
 /*********************************************/
 .suscripcion {
@@ -243,6 +259,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #6AD9F9;
 	border-color: #00008C;
 	color: #00008C;
+}
+
+.input-group-btn .btn-default {
+	border-width: 1px;
 }
 
 .btn-accion1:hover {
