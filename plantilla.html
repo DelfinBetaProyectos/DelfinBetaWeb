@@ -116,14 +116,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-					<h2>Suscríbete<br /><small>Déjame tu email y compartiré contigo info sobre el mundo web.</small></h2>
-					<form id="form_suscripcion" name="form_suscripcion" action="suscripcion.php" method="post">
-						<div class="input-group input-group-lg">
-							<span class="input-group-addon"><i class="icon-envelope-o"></i></span>
+					<div class="col-xs-12">
+						<h2>Suscríbete<br /><small>Déjame tu email y compartiré contigo info sobre el mundo web.</small></h2>
+					</div>
+					<form id="form_suscripcion" name="form_suscripcion" action="suscripcion.php" method="post" role="form">
+						<div class="col-xs-12 col-md-4 form-group">
+							<label for="nombre" class="sr-only">Nombre:</label>
+							<input type="nombre" name="nombre" class="form-control" placeholder="Tu Nombre" required />
+						</div>
+						<div class="col-xs-12 col-md-4 form-group">
+							<label for="email" class="sr-only">Email:</label>
 							<input type="email" name="email" class="form-control" placeholder="tu@email.com" required />
-							<span class="input-group-btn">
-								<button type="submit" class="btn btn-default btn-accion2">Enviar</button>
-							</span>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<button type="submit" class="btn btn-default btn-accion2">Enviar</button>
 						</div>
 					</form>
 				</div>
@@ -146,7 +152,7 @@
 					<h2>Redes Sociales >> @delfinbeta</h2>
 					<ul class="redes">
 						<li><a href="https://twitter.com/delfinbeta" target="_blank"><i class="icon-twitter-square"></i></a></li>
-						<li><a href="https://www.facebook.com/delfin.beta" target="_blank"><i class="icon-facebook-official"></i></a></li>
+						<li><a href="https://www.facebook.com/delfinbeta" target="_blank"><i class="icon-facebook-official"></i></a></li>
 						<li><a href="https://ve.linkedin.com/in/delfinbeta" target="_blank"><i class="icon-linkedin-square"></i></a></li>
 						<li><a href="https://github.com/delfinbeta" target="_blank"><i class="icon-github-square"></i></a></li>
 						<li><a href="https://www.instagram.com/delfinbeta/" target="_blank"><i class="icon-instagram"></i></a></li>

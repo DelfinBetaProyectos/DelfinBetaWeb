@@ -279,16 +279,8 @@ h1, h2, h3, h4, h5, h6 {
 .suscripcion {
 	background-color: #FFC200;
 	margin-bottom: 0;
+	padding-bottom: .6em;
 	padding-top: 0;
-}
-
-.suscripcion .input-group-addon {
-  background-color: #FFFFFF;
-}
-
-.suscripcion .input-group-addon, .suscripcion input, .suscripcion .btn-default {
-	border-color: #00008C;
-	color: #00008C;
 }
 
 /*********************************************/
@@ -301,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-.form-control:focus {
+.form-control.sombra:focus {
 	background-color: #00008C;
 	border-color: #CCCCCC;
 	-webkit-box-shadow: 8px 6px 5px #B9B9B9;
