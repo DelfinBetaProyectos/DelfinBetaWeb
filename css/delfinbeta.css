@@ -222,10 +222,44 @@ h1, h2, h3, h4, h5, h6 {
 /*****            Habilidades            *****/
 /*********************************************/
 .habilidad {
+	background-color: #8ED6F5;
 	border: 1px solid #00008C;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	padding: .8em;
+	position: relative;
+	text-align: center;
+}
+
+.habilidad:before, .habilidad:after {
+  -webkit-border-radius: 100px / 10px;
+  	 -moz-border-radius: 100px / 10px;
+  	 			border-radius: 100px / 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  	 -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  	 			box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  bottom: 0;
+  content: "";
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: -1;
+}
+
+.habilidad:after {
+  left: auto;
+  right: 10px;
+  -webkit-transform: skew(8deg) rotate(3deg);
+     -moz-transform: skew(8deg) rotate(3deg);
+      -ms-transform: skew(8deg) rotate(3deg);
+       -o-transform: skew(8deg) rotate(3deg);
+          transform: skew(8deg) rotate(3deg);
+}
+
+.habilidad img {
+	margin: 0 auto;
+	width: 60%;
 }
 
 /*********************************************/
