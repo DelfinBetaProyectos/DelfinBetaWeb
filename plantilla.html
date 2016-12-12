@@ -119,14 +119,22 @@
 					<div class="col-xs-12">
 						<h2>Suscríbete<br /><small>Déjame tu email y compartiré contigo info sobre el mundo web.</small></h2>
 					</div>
+					<div id="suscripcion_exito" class="col-xs-12 text-center hidden">
+						<p class="bg-success text-success"><i class="icon-check"></i> ¡Gracias! por unirte a mi comunidad <i class="icon-heart"></i></p>
+					</div>
+					<div id="suscripcion_error" class="col-xs-12 text-center hidden">
+						<p class="bg-danger text-danger"><i class="icon-times"></i> <span id="msjError"></span></p>
+					</div>
 					<form id="form_suscripcion" name="form_suscripcion" action="suscripcion.php" method="post" role="form">
 						<div class="col-xs-12 col-md-4 form-group">
 							<label for="nombre" class="sr-only">Nombre:</label>
-							<input type="nombre" name="nombre" class="form-control" placeholder="Tu Nombre" required />
+							<input type="nombre" name="nombre" class="form-control" placeholder="Tu Nombre" required aria-describedby="bloqueErrorNombre" />
+							<span id="bloqueErrorNombre" class="help-block"></span>
 						</div>
 						<div class="col-xs-12 col-md-4 form-group">
 							<label for="email" class="sr-only">Email:</label>
-							<input type="email" name="email" class="form-control" placeholder="tu@email.com" required />
+							<input type="email" name="email" class="form-control" placeholder="tu@email.com" required aria-describedby="bloqueErrorEmail" />
+							<span id="bloqueErrorEmail" class="help-block"></span>
 						</div>
 						<div class="col-xs-12 col-md-4">
 							<button type="submit" class="btn btn-default btn-accion2">Enviar</button>

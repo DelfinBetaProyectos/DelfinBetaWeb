@@ -372,6 +372,23 @@ input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + lab
 	vertical-align: middle;
 }
 
+.has-warning .form-control {
+	background-color: #FFC200;
+}
+
+.has-error .form-control {
+	background-color: #F36D66;
+	color: #FFFFFF;
+}
+
+.has-success .form-control {
+	background-color: #CAFBE1;
+}
+
+.bg-danger {
+	background-color: #F36D66;
+}
+
 /*********************************************/
 /*****           MEDIA QUERIES           *****/
 /*********************************************/
