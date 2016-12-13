@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1em;
 }
 
-#form_contacto {
+#form_contacto, #contacto_exito, #contacto_error {
 	margin-top: 1.2em;
 }
 
@@ -386,7 +386,7 @@ input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + lab
 }
 
 .bg-danger {
-	background-color: #F36D66;
+	background-color: #F7857F;
 }
 
 /*********************************************/

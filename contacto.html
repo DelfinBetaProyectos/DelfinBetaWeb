@@ -98,18 +98,27 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-6">
+					<div id="contacto_exito" class="col-xs-12 text-center hidden">
+						<p class="bg-success text-success"><i class="icon-check"></i> Gracias por contactarme, pronto te contestaré <i class="icon-envelope"></i></p>
+					</div>
+					<div id="contacto_error" class="col-xs-12 text-center hidden">
+						<p class="bg-danger text-danger"><i class="icon-times"></i> <span id="msjError"></span></p>
+					</div>
 					<form id="form_contacto" name="form_contacto" action="contacto.php" method="post">
 						<div class="form-group">
 							<label for="nombre" class="sr-only">Nombre:</label>
-							<input type="text" class="form-control sombra input-lg" name="nombre" id="nombre" placeholder="Escribe tu Nombre" required />
+							<input type="text" class="form-control sombra input-lg" name="nombre" id="nombre" placeholder="Escribe tu Nombre"  aria-describedby="bloqueErrorNombre" />
+							<span id="bloqueErrorNombre" class="help-block"></span>
 						</div>
 						<div class="form-group">
 							<label for="email" class="sr-only">Email:</label>
-							<input type="email" class="form-control sombra input-lg" name="email" id="email" placeholder="Escribe tu Email" required />
+							<input type="email" class="form-control sombra input-lg" name="email" id="email" placeholder="Escribe tu Email"  aria-describedby="bloqueErrorEmail" />
+							<span id="bloqueErrorEmail" class="help-block"></span>
 						</div>
 						<div class="form-group">
 							<label for="mensaje" class="sr-only">Mensaje:</label>
-							<textarea class="form-control sombra input-lg" name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Déjame tu mensaje" required></textarea>
+							<textarea class="form-control sombra input-lg" name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Déjame tu mensaje"  aria-describedby="bloqueErrorMensaje"></textarea>
+							<span id="bloqueErrorMensaje" class="help-block"></span>
 						</div>
 						<div class="checkbox">
 							<input type="checkbox" name="suscripcion" id="suscripcion" value="1" /> <label for="suscripcion">Suscríbeme para recibir info de tus publicaciones.</label>
