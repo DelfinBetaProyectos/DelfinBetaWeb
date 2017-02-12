@@ -70,7 +70,7 @@ $(document).ready(function() {
 
 
 	//----------------------------------------------------
-	//  Suscripción
+	//  Contacto
 	//----------------------------------------------------
 	$("#form_contacto").submit(function(ev) {
 		ev.preventDefault();
