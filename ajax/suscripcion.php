@@ -16,7 +16,7 @@ if(isset($_POST['email'])) { $email = $_POST['email']; } else { $email = '---'; 
 if(!$suscriptor->email_existe($email, 0)) {
 	if($suscriptor->insertar($nombre, $email)) {
 		// Enviar Email
-		//$eemail->enviar_suscripcion($nombre, $email);
+		$eemail->enviar_suscripcion($nombre, $email, $codigo);
 
 		echo json_encode(array("error" => false, "mensaje" => 'Suscriptor Agregado'));
 	} else {
