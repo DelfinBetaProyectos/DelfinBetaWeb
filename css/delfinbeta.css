@@ -60,6 +60,16 @@ h1, h2, h3, h4, h5, h6 {
 	        box-shadow: 8px 6px 5px #B9B9B9;
 }
 
+.botones_compartir {
+	padding: 0;
+	margin: 2em 0;
+}
+
+.botones_compartir li {
+	list-style: none;
+	vertical-align: top;
+}
+
 /*********************************************/
 /*****         Encabezado - Menú         *****/
 /*********************************************/
@@ -412,6 +422,12 @@ input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + lab
 	#menuWeb {
 		background-color: transparent;
 		margin-top: 20px;
+	}
+
+	.botones_compartir li {
+		*display: inline;
+		display: inline-block;
+		margin: 0 .6em;
 	}
 
 	.portada-titular {

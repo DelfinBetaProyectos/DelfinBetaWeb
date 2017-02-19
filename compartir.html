@@ -49,6 +49,15 @@
 </head>
 
 <body class="espaciado-menu">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
 	<nav class="navbar navbar-default navbar-fixed-top encabezado" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -84,12 +93,22 @@
 				<div class="col-xs-12 col-md-8">
 					<h2><a href="#">Startup Weekend Maracay</a></h2>
 					<h4>Publicado el 4 de diciembre de 2016</h4>
+					<ul class="botones_compartir">
+						<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="delfinbeta" data-size="large" data-text="Startup Weekend Maracay" data-url="http://delfinbeta.com.ve/articulo.php?id=2">Tweet</a></li>
+						<li><div class="g-plusone" data-href="http://delfinbeta.com.ve/articulo.php?id=2" data-annotation="inline" data-width="200"></div></li>
+						<li><div class="fb-like" data-href="http://delfinbeta.com.ve/articulo.php?id=2" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
+					</ul>
 				</div>
 			</div>
 			<div class="row articulo text-right">
 				<div class="col-xs-12 col-md-8">
 					<h2><a href="#">¿Quién es DelfinBeta?</a></h2>
 					<h4>Publicado el 30 de noviembre de 2016</h4>
+					<ul class="botones_compartir">
+						<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="delfinbeta" data-size="large" data-text="¿Quién es DelfinBeta?" data-url="http://delfinbeta.com.ve/articulo.php?id=1">Tweet</a></li>
+						<li><div class="g-plusone" data-href="http://delfinbeta.com.ve/articulo.php?id=1" data-annotation="inline" data-width="200"></div></li>
+						<li><div class="fb-like" data-href="http://delfinbeta.com.ve/articulo.php?id=1" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
+					</ul>
 				</div>
 				<div class="col-xs-12 col-md-4">
 					<div class="img"><a href="#"><img src="archivos_articulos/oficina.jpg" alt="" title="" class="img-responsive"></a></div>
@@ -162,5 +181,7 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/delfinbeta.js"></script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'es'}</script>
 </body>
 </html>
