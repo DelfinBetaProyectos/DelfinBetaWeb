@@ -1,3 +1,20 @@
+<?php
+require("configuracion/inicio.php");
+
+// Clases
+require_once("clases/clase_articulo.php");
+require_once("clases/clase_general.php");
+
+// Objetos
+$articulo = new Articulo($conexion);
+$general = new General($conexion);
+
+if(isset($_GET['id'])) { $id_articulo = $_GET['id']; } else { $id_articulo = 0; }
+
+if(!$articulo->datos($id_articulo)) {
+	header("location: index.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +22,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<title>Para Compartir // DelfinBeta</title>
+	<title><?=$articulo->titulo?> // DelfinBeta</title>
 	<meta name="creator" content="www.delfinbeta.com.ve" />
 	<meta name="description" content="DelfinBeta es una Desarrolladora Web Venezolana, mi nombre es Dayan Betancourt desarrollo Frontend y Backend y también soy Emprendedora." />
 	<meta name="distribution" content="global" />
@@ -46,9 +63,21 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <meta property="og:url" content="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<?=$articulo->titulo?>" />
+  <meta property="og:description" content="<?=$articulo->descripcion?>" />
+  <meta property="og:image" content="http://delfinbeta.com.ve/archivos_articulos/<?=$articulo->imagen?>" />
+
+  <meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@delfinbeta" />
+	<meta name="twitter:title" content="<?=$articulo->titulo?>" />
+	<meta name="twitter:description" content="<?=$articulo->descripcion?>" />
+	<meta name="twitter:image" content="http://delfinbeta.com.ve/archivos_articulos/<?=$articulo->imagen?>" />
 </head>
 
-<body class="espaciado-menu">
+<body>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -58,7 +87,7 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
-	<nav class="navbar navbar-default navbar-fixed-top encabezado" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top encabezado-inicio" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button id="botonMenu" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuWeb" aria-expanded="false">
@@ -83,10 +112,32 @@
 		</div>
 	</nav>
 
-	<section>
+	<section class="portadaArt">
 		<div class="container">
-			<h2>Para Compartir</h2>
-			<div id="articulos"></div>
+			<div class="row portadaArt-titular">
+				<div class="col-xs-8 col-xs-offset-2 text-center">
+					<h1><?=$articulo->titulo?></h1>
+					<hr />
+					<?php $fecha = explode("-", $articulo->fecha_registro);
+								$fecha_unix = mktime(0, 0, 0, $fecha[1], $fecha[2], $fecha[0]); ?>
+					<h4><?=date('d', $fecha_unix)?> de <?=$general->mes($articulo->fecha_registro)?> de <?=date('Y', $fecha_unix)?></h4>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="articulo2">
+		<div class="container">
+			<?=$articulo->contenido?>
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="botones_compartir">
+						<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="delfinbeta" data-size="large" data-text="¿Quién es DelfinBeta?" data-url="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>">Tweet</a></li>
+						<li><div class="g-plusone" data-href="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>" data-annotation="inline" data-width="200"></div></li>
+						<li><div class="fb-like" data-href="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -154,27 +205,7 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/delfinbeta.js"></script>
-	<script>
-		$(document).ready(function() {
-      $.ajax({
-        url: "ajax/articulos.php",    // URL destino
-        type: "POST"
-      }).done(function(data) {
-        $("#articulos").html(data);
-      }).fail(function() {
-        $('#articulos').html("Ha ocurrido un error. Contacte a Sistemas.");
-      });
-    });
-	</script>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	<script type="text/javascript">
-	  window.___gcfg = {lang: 'es'};
-
-	  (function() {
-	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-	    po.src = 'https://apis.google.com/js/platform.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-	  })();
-	</script>
+	<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'es'}</script>
 </body>
 </html>

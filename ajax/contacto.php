@@ -19,7 +19,7 @@ if(isset($_POST['suscripcion'])) { $suscripcion = $_POST['suscripcion']; } else 
 
 if($comentario->insertar($nombre, $email, $mensaje)) {
 	// Enviar Email
-	//$eemail->recibir_comentario($nombre, $email, $mensaje);
+	$eemail->recibir_comentario($nombre, $email, $mensaje);
 
 	if(($suscripcion > 0) && !$suscriptor->email_existe($email, 0)) { $suscriptor->insertar($nombre, $email); }
 

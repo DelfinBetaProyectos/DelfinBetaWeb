@@ -270,6 +270,45 @@ h1, h2, h3, h4, h5, h6 {
 	width: 80%;
 }
 
+.articulo2 {
+	margin-top: 1em;
+}
+
+/*********************************************/
+/*****         Portada Artículos         *****/
+/*********************************************/
+.portadaArt {
+	background-attachment: fixed;
+	background-image: url("../img/bg-oficina.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+		 -moz-background-size: cover;
+		 	 -o-background-size: cover;
+		 	 		background-size: cover;
+	color: #FFFFFF;
+	height: 60vh;
+	overflow: hidden;
+}
+
+.portadaArt h1 {
+	color: #FFFFFF;
+}
+
+.portadaArt h4 {
+	font-family: 'Cutive Mono', monospace, serif;
+	color: #FFC200;
+}
+
+.portadaArt .container {
+	height: 60vh;
+	position: relative;
+}
+
+.portadaArt-titular {
+	margin-top: 18vh;
+}
+
 /*********************************************/
 /*****             Contacto              *****/
 /*********************************************/
@@ -432,6 +471,10 @@ input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + lab
 
 	.portada-titular {
 		margin-top: 40vh;
+	}
+
+	.portadaArt-titular {
+		margin-top: 20vh;
 	}
 
 	.portada-titular:hover h1 {
