@@ -13,9 +13,9 @@
 $GLOBALS['app_root'] = $_SERVER['DOCUMENT_ROOT'];
 $GLOBALS['domain_root'] = "http://".$_SERVER['HTTP_HOST'];
 $DBservidor = "localhost";
-$DBnombre = "";
-$DBusuario = "root";
-$DBcontrasena = "";
+$DBnombre = "delfinbeta";
+$DBusuario = "udelfinbeta";
+$DBcontrasena = "9q58pbCw8GJU";
 $TIEMPO_MAXIMO_SESION = 3600;  // en segundos
 
 #################### Configuracion Local ####################

@@ -5,6 +5,7 @@ class Suscriptor {
 	private $id;
 	public  $nombre;
 	public  $email;
+	private $codigo;
 	private $estado;
 	private $fecha_registro;
 	private $conexion;
@@ -20,7 +21,7 @@ class Suscriptor {
 	}
 	
 	// Insertar un Suscriptor a la Base de Datos
-	public function insertar($nombre, $email) {
+	public function insertar($nombre, $email, $codigo) {
 		if(!$nombre = $this->seguridad->texto_seguro($this->conexion, $nombre)) {
 			$this->error = "Nombre no es Seguro";
 			return false;
@@ -31,7 +32,12 @@ class Suscriptor {
 			return false;
 		}
 		
-		$sql = sprintf("INSERT INTO suscriptores(nombre, email, estado, fecha_registro) VALUES('%s', '%s', 1, CURDATE())", $nombre, $email);
+		if(!$codigo = $this->seguridad->texto_seguro($this->conexion, $codigo)) {
+			$this->error = "Código no es Seguro";
+			return false;
+		}
+		
+		$sql = sprintf("INSERT INTO suscriptores(nombre, email, codigo, estado, fecha_registro) VALUES('%s', '%s', '%s', 1, CURDATE())", $nombre, $email, $codigo);
 		
 		if($inserto = mysqli_query($this->conexion, $sql)) {
 			return true;
@@ -102,6 +108,44 @@ class Suscriptor {
 		}
 	}
 	
+	// Cancelar Suscripción 
+	public function cancelar_suscripcion($email, $codigo) {
+		if(!$email = $this->seguridad->texto_seguro($this->conexion, $email)) {
+			$this->error = "Email no es Seguro";
+			return false;
+		}
+		
+		if(!$codigo = $this->seguridad->texto_seguro($this->conexion, $codigo)) {
+			$this->error = "Código no es Seguro";
+			return false;
+		}
+		
+		if(($email != "") && ($codigo != "")) {
+			$sql = sprintf("SELECT id FROM suscriptores WHERE email='%s' AND codigo='%s'", $email, $codigo);
+			if($query = mysqli_query($this->conexion, $sql)) {
+				if($rsuscriptor = mysqli_fetch_assoc($query)) {
+					$sql2 = sprintf("UPDATE suscriptores SET estado=0 WHERE id='%d'", $rsuscriptor['id']);
+
+					if($desactivo = mysqli_query($this->conexion, $sql2)) {
+						return true;
+					} else {
+						$this->error = "No se puede Eliminar (D)";
+						return false;
+					}
+				} else {
+					$this->error = 'Datos inválidos';
+					return false;
+				}
+			} else {
+				$this->error = 'No se puede consultar Email';
+				return false;
+			}
+		} else {
+			$this->error = 'Datos vacíos';
+			return false;
+		}
+	}
+	
 	// Obtener datos de un Suscriptor identificado por su id
 	public function datos($id) {
 		if(!$id = $this->seguridad->entero_seguro($id)) {
@@ -116,6 +160,7 @@ class Suscriptor {
 				$this->id = $rsuscriptor['id'];
 				$this->nombre = $rsuscriptor['nombre'];
 				$this->email = $rsuscriptor['email'];
+				$this->codigo = $rsuscriptor['codigo'];
 				$this->estado = $rsuscriptor['estado'];
 				$this->fecha_registro = $rsuscriptor['fecha_registro'];
 				return true;
@@ -131,6 +176,10 @@ class Suscriptor {
 	
 	public function obtener_id() {
 		return $this->id;
+	}
+	
+	public function obtener_codigo() {
+		return $this->codigo;
 	}
 	
 	public function obtener_codEstado() {
