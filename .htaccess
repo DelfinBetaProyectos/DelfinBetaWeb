@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^delfinbeta.com.ve [NC]
+RewriteRule ^(.*)$ http://www.delfinbeta.com.ve/$1 [L,R=301]
