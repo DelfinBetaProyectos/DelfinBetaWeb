@@ -6,14 +6,14 @@
 /*****  Autor: Lcda. Dayan Betancourt    *****/
 /*****                                   *****/
 /*********************************************/
-@import "https://fonts.googleapis.com/css?family=Farsan|Kalam|Cutive+Mono";
+@import "https://fonts.googleapis.com/css?family=Roboto|Kalam|Cutive+Mono";
 
 /*********************************************/
 /*****        Etiquetas Globales         *****/
 /*********************************************/
 body {
-	font-family: 'Farsan', cursive, serif;
-	font-size: 20px;
+	font-family: 'Roboto', cursive, serif;
+	font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -132,12 +132,16 @@ code {
 		 	 -o-border-radius: 6px;
 		 	 		border-radius: 6px;
   color: #FFFFFF;
+  font-family: 'Cutive Mono', monospace, serif;
+  font-size: .8em;
   margin: 0 2px;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
   background-color: rgba(255, 255, 255, .7);
   color: #00008C;
+  font-family: 'Cutive Mono', monospace, serif;
+  font-size: .8em;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {

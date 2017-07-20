@@ -135,7 +135,7 @@ if(!$articulo->datos($id_articulo)) {
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="botones_compartir">
-						<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="delfinbeta" data-size="large" data-text="¿Quién es DelfinBeta?" data-url="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>">Tweet</a></li>
+						<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="delfinbeta" data-size="large" data-text="<?=$articulo->titulo?>" data-url="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>">Tweet</a></li>
 						<li><div class="g-plusone" data-href="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>" data-annotation="inline" data-width="200"></div></li>
 						<li><div class="fb-like" data-href="http://delfinbeta.com.ve/articulo.php?id=<?=$id_articulo?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
 					</ul>
